@@ -7,17 +7,7 @@ const router= express.Router() ;
 // lets set up cloudinary config
 // we will upload image on cloudanary
 
- 
-
-
-
-
-
-
-
-
-
-   
+  
   router.post('/images/upload',(req,res)=>{
 
       try{
