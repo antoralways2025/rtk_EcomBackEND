@@ -9,11 +9,10 @@ const router= express.Router() ;
 
  
 
-cloudinary.config({ 
-    cloud_name:process.env.CLOUD_NAME, 
-    api_key: process.env.API_KEY,
-    API_SECRET:process.env.API_SECRET 
-  });
+
+
+
+
 
 
 
@@ -23,7 +22,18 @@ cloudinary.config({
 
       try{
 
+
+
+        // cloudinary config
+        cloudinary.config({ 
+          cloud_name:process.env.CLOUD_NAME, 
+          api_key: process.env.API_KEY,
+          api_secret:process.env.API_SECRET 
+        });
           
+
+
+      
         if(!req.files || Object.keys(req.files).length === 0 ){
           return res.status(400).json({err:"No File were uploaded"})
         }
